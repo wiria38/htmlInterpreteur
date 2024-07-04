@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML Interpreteur</title>
+        <link rel="stylesheet" href="assets/styles/main.css">
+    </head>
+
+    <body>
+        <header>
+            <button onclick="loadDoc()" class="loadButton">Run Code</button>
+            <button onclick="autoLoadDoc()" class="loadButton">Auto Run Code</button>
+            <button onclick="stopAutoLoadDoc()" class="loadButton">Stop Auto Run Code</button>
+            <div class="loadButton" id="isActiveAutoRun" style="background: red;">Auto Run Disable</div>
+        </header>
+        <main>
+            <div class="editor">
+                <div id="line">
+                    <span class="NumLine">1</span>
+                </div>
+                <textarea id="text-writer"></textarea>
+            </div>
+            <div id="result">
+                <div id="Frametitle"></div>
+                <iframe id="iframeResult"></iframe>
+            </div>
+        </main>
+
+        <script src="assets/scripts/app.js"></script>
+    </body>
+</html>
