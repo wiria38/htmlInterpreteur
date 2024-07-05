@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML Interpreteur</title>
+        <link rel="stylesheet" href="assets/styles/main.css">
+    </head>
+
+    <body>
+        <header>
+            <button onclick="loadDoc()" class="loadButton">Run Code</button>
+            <button onclick="autoLoadDoc()" class="loadButton">Auto Run Code</button>
+            <button onclick="stopAutoLoadDoc()" class="loadButton">Stop Auto Run Code</button>
+            <div class="loadButton" id="isActiveAutoRun" style="background: red;">Auto Run Disable</div>
+            <div class="loadButton" id="timeOutDelay">
+                <label for="timeOutValue">Update Delay : </label>
+                <select name="timeOutValue" id="timeOutValue" value="3">
+                    <option value="0">0s</option>
+                    <option value="1" selected="selected">1s</option>
+                    <option value="2">2s</option>
+                    <option value="3">3s</option>
+                    <option value="4">4s</option>
+                    <option value="5">5s</option>
+                </select>
+            </div>
+            <button onclick="clearCode()" class="loadButton">Clear Code</button>
+            <button onclick="clearDoc()" class="loadButton">Clear Result</button>
+        </header>
+        <main>
+            <div class="editor">
+                <div id="line">
+                    <span class="NumLine">1</span>
+                </div>
+                <textarea id="text-writer"></textarea>
+            </div>
+            <div id="resizer"></div>
+            <div id="result">
+                <div id="Frametitle"></div>
+                <iframe id="iframeResult"></iframe>
+            </div>
+        </main>
+
+        <script src="assets/scripts/app.js"></script>
+    </body>
+</html>
